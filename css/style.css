@@ -1,0 +1,361 @@
+/* =========================================================
+   CRUD DE FUNCIONÁRIOS
+   CORES: BRANCO + PRETO + AZUL ESCURO
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #ffffff;
+    color: #111111;
+    line-height: 1.6;
+}
+
+/* =========================
+   TÍTULOS
+   ========================= */
+
+h1,
+h2 {
+    text-align: center;
+}
+
+h2 {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    background: #000000;
+    color: #ffffff;
+    border-radius: 12px;
+    font-size: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.20);
+}
+
+h1 {
+    color: #000000;
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   FORMULÁRIOS
+   ========================= */
+
+form {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   LABELS
+   ========================= */
+
+label {
+    display: inline-block;
+    width: 180px;
+    margin-bottom: 18px;
+    color: #111111;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* =========================
+   CAMPOS
+   ========================= */
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 190px);
+    padding: 12px 14px;
+    margin-bottom: 18px;
+
+    background: #ffffff;
+    color: #111111;
+
+    border: 1px solid #999999;
+    border-radius: 7px;
+
+    font-size: 15px;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #888888;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #0b3155;
+    box-shadow: 0 0 0 3px rgba(11, 49, 85, 0.12);
+}
+
+/* =========================
+   BOTÕES
+   ========================= */
+
+button,
+input[type="submit"] {
+    border: none;
+    border-radius: 7px;
+
+    background: #0b3155;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    padding: 13px 25px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background: #071f36;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.20);
+}
+
+/* =========================
+   CONSULTA
+   ========================= */
+
+form[action="consult-dados.php"] {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 750px;
+}
+
+form[action="consult-dados.php"] label {
+    width: auto;
+    margin: 0;
+    white-space: nowrap;
+}
+
+form[action="consult-dados.php"] input[type="text"] {
+    flex: 1;
+    width: auto;
+    margin: 0;
+}
+
+form[action="consult-dados.php"] input[type="submit"] {
+    width: auto;
+    margin: 0;
+}
+
+/* =========================
+   RESULTADOS
+   ========================= */
+
+h3 {
+    width: 100%;
+    max-width: 750px;
+    margin: 25px auto 15px;
+
+    color: #000000;
+    font-size: 21px;
+}
+
+hr {
+    width: 100%;
+    max-width: 750px;
+    margin: 25px auto;
+
+    border: none;
+    border-top: 1px solid #cccccc;
+}
+
+/* =========================
+   FORMULÁRIO DE ALTERAÇÃO
+   ========================= */
+
+form[action="form.alterar.php"] {
+    max-width: 750px;
+}
+
+form[action="form.alterar.php"] label {
+    width: 180px;
+    margin-bottom: 18px;
+}
+
+form[action="form.alterar.php"] input[type="text"] {
+    width: calc(100% - 190px);
+}
+
+form[action="form.alterar.php"] button {
+    width: 100%;
+}
+
+/* =========================
+   SALVAR ALTERAÇÃO
+   ========================= */
+
+form[action="salvar-alteracao.php"] {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 35px;
+}
+
+form[action="salvar-alteracao.php"] h1 {
+    margin-bottom: 30px;
+    color: #000000;
+    font-size: 26px;
+}
+
+form[action="salvar-alteracao.php"] label {
+    width: 230px;
+    margin-bottom: 18px;
+}
+
+form[action="salvar-alteracao.php"] input[type="text"] {
+    width: calc(100% - 240px);
+    margin-bottom: 18px;
+}
+
+form[action="salvar-alteracao.php"] button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* =========================
+   MENSAGEM DE SUCESSO
+   ========================= */
+
+body > p {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+
+    padding: 20px 25px 10px;
+
+    background: #ffffff;
+    border: 1px solid #dddddd;
+
+    color: #222222;
+
+    text-align: center;
+    font-size: 16px;
+
+    border-radius: 10px 10px 0 0;
+}
+
+body > h2[style*="16a34a"] {
+    margin-bottom: 0;
+    color: #000000 !important;
+
+    background: #ffffff;
+    border: 1px solid #dddddd;
+
+    border-radius: 10px 10px 0 0;
+}
+
+strong {
+    color: #0b3155;
+}
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    h2 {
+        padding: 20px;
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    form {
+        padding: 25px 20px;
+    }
+
+    label {
+        display: block;
+        width: 100%;
+        margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    form[action="consult-dados.php"] {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form[action="consult-dados.php"] label {
+        width: 100%;
+    }
+
+    form[action="consult-dados.php"] input[type="text"] {
+        width: 100%;
+    }
+
+    form[action="consult-dados.php"] input[type="submit"] {
+        width: 100%;
+    }
+
+    form[action="form.alterar.php"] label {
+        width: 100%;
+    }
+
+    form[action="form.alterar.php"] input[type="text"] {
+        width: 100%;
+    }
+
+    form[action="salvar-alteracao.php"] {
+        padding: 25px 20px;
+    }
+
+    form[action="salvar-alteracao.php"] h1 {
+        font-size: 22px;
+    }
+
+    form[action="salvar-alteracao.php"] label {
+        width: 100%;
+    }
+
+    form[action="salvar-alteracao.php"] input[type="text"] {
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+}
